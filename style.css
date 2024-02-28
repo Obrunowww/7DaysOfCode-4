@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    color: white;
+    background-color: rgb(26, 25, 25);
+    font-size: 20px;
+    overflow: hidden;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrinho{
+    opacity: 1;
+    animation: aparecerDeBaixo ease 1.3s;
+    position: relative;
+    overflow: hidden;
+    padding: 1%;
+    border: solid 1px rgba(255, 255, 255, 0.267);
+    border-radius: 10px;
+    width: 60%;
+    height:70%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.carrinho section{
+    animation: aparecerDeBaixo ease 1s;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+.carrinho section .setor{
+    cursor: pointer;
+    padding: 2%;
+    transition: all ease 1.5s, background ease 0.2s;
+    flex: none;
+    border: solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 30%;
+    height: 40%;
+    flex: none;
+}
+.carrinho section .setor:hover{
+    background-color: rgba(0, 0, 0, 0.459);
+}
+
+.animação{
+    position: absolute;
+    transition: all ease 1s;
+    left: 0%;
+    top:0%;
+    width: 100%;
+    height: 100%;
+    animation: entrar linear 1s;
+    background-color:rgb(26, 25, 25); 
+}
+
+.alinhamentoDoSetor{
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4%;
+}
+
+.iten{
+    padding: 2%;
+    animation: aparecerDeBaixo ease 1s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 1px rgba(255, 255, 255, 0.267);
+    border-radius: 10px;
+    width: 50%;
+    height: 15%;
+}
+.itenImagen{
+    width: 10%;
+    height: 80%;
+    border: solid 1px ;
+    border-radius: 2px;
+
+}
+.sair{
+    opacity: 1;
+    animation: aparecer forwards 5s;
+    font-size: 30px;
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    cursor: pointer;
+}
+.compra{
+    padding: 2%;
+    padding-right: 5%;
+    gap: 10%;
+    transition: all ease 1s;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(26, 25, 25);
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+}
+.titulo, .setores {
+    transition: all ease 1s;
+}
+.CaixaDaCompra{
+    gap: 4%;
+    overflow-y: auto;
+    transition: all ease 1s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    width: 100%;
+    height: 80%;
+    
+}
+.areaAdicionar{
+    animation: aparecerDeCima ease-in 1s;
+    transition: all ease 1s;
+    flex: none;
+    height: 13%;
+    display: flex;
+    justify-content: center;
+}
+.areaAdicionar input{
+    padding: 1%;
+}
+.BotãoMais{
+    opacity: 1;
+    animation: aparecer forwards 5s;
+    animation-delay: 0.1s;
+    position: absolute;
+    cursor: pointer;
+    
+}
+h2{
+    opacity: 1;
+    animation: aparecerDeCima ease 1s;
+}
+
+@keyframes sairEsquerda {
+    to{
+        transform: translateX(-200%);
+    }
+    
+}
+
+
+@keyframes entrar {
+    from{
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20%;
+        height: 20%;
+    }
+    
+}
+
+@keyframes aparecerDeBaixo {
+    from{
+        opacity: 0.4;
+        scale: 0.2;
+        transform: translateY(100%);
+        filter: blur(10px);
+
+    }
+    
+}
+@keyframes aparecerDeCima{
+    from{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+@keyframes aparecerDeBaixo{
+    from{
+        opacity: 0;
+        transform: translateY(200%);
+    }
+}
+@keyframes aparecer{
+    from{
+        opacity: 0;
+    }
+}
