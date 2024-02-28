@@ -6,3 +6,6 @@ Funcionalidades
 Adicionar alimentos à lista de compras.
 Agrupar alimentos em categorias predefinidas.
 Exibir a lista de compras organizada por categorias.
+
+veja em : https://obrunowww.github.io/7DaysOfCode-4/
+
