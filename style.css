@@ -148,6 +148,12 @@ main{
 .areaAdicionar input{
     padding: 1%;
 }
+.areaAdicionar button{
+    border: solid 1px;
+    cursor: pointer;
+    padding: 1%;
+
+}
 .BotãoMais{
     opacity: 1;
     animation: aparecer forwards 5s;
